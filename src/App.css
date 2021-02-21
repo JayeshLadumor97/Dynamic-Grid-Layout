@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+html , body, #root , .App {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.absolute-center {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
   display: flex;
-  flex-direction: column;
+  right: 0;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  height: 50px;
+  background: silver;
 }
 
-.App-link {
-  color: #61dafb;
+.absolute-center select {
+  width: 70px;
+  margin: 15px;
+  padding: 8px 10px 10px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#create-grid {
+  padding: 8px 10px 10px 10px;
+  border-radius: 10%;
+  background: #e4dfff;
 }
+
+#create-grid:hover {
+  box-shadow: 1px 2px 3px 0px rosybrown ;
+}
+
+#create-grid:focus {
+  border: 0;
+  outline:none;
+  padding: 8px 10px 10px 10px;
+  border-radius: 10%;
+  background: #e4dfff;
+}
+
+
+
+.grid-container {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    height: calc(100% - 110px);
+    background: lavender;
+    margin: 30px;
+    overflow-x: scroll;
+    width: calc(100% - 60px);
+}
+
+.no-grid-div-parent > div {
+  overflow-y: hidden !important;
+}
+.no-grid-div-parent {
+  overflow-x: hidden !important;
+  display: flex;
+  align-items: center;
+}
+.no-grid-div {
+    text-align: center;
+    justify-content: center;
+    width: 100% !important;
+    border: 0px !important;
+    color: #d07676;
+}
+
+.grid-container > div {
+  width: 180px;
+  overflow-y: scroll;
+} 
+
+.add-box-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.add-box-section button:hover {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.box-card {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  border: 1px solid gray;
+  position: relative;
+  height: 40px;
+  border-radius: 10%;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+}
+
+.box-card:hover {
+  box-shadow: 0 11px 23px 0 rgb(0 0 0 / 20%);
+}
+
+.remove {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 5px;
+      top: 3px;
+  }
+  /* Scrollbar CSS */
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
